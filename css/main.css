@@ -171,26 +171,26 @@ a:hover {
 	padding: 0;
 	text-align: center;
 	color: white;
-	width: 25px;
+	/*width: 25px;*/
 	transition: all .25s .1s ease-out;
 }
-#main-accordion-container>ul>li:hover .section-title {
+/*#main-accordion-container>ul>li:hover .section-title {
 	width: 80px;
-}
+}*/
 #main-accordion-container>ul>li .section-title h2 {
 	transform: rotate(90deg);
 	white-space: nowrap;
 	width: 0px;
-	display: none;
+	/*display: none;*/
 	width: 50px;
 	margin-left: 25px;
 	position: absolute;
     top: 20px;
 	transition: all .3s .5s ease-in-out;
 }
-#main-accordion-container>ul>li:hover .section-title h2 {
+/*#main-accordion-container>ul>li:hover .section-title h2 {
 	display: block;
-}
+}*/
 
 
 #main-accordion-container>ul>li .section-content {
