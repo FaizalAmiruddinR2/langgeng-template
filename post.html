@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Langgeng</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container-fluid px-5">
+			<a class="navbar-brand mr-md-3" href="#">
+				<img src="images/logo.png">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<a href="#" class="btn btn-primary mx-3" id="btn-new-app">
+					<span>New Apps</span> <br> <span>Coming Soon</span>
+				</a>
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item" id="home-nav">
+						<a class="nav-link" href="index.html">Langgeng <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="news.html">News</a>
+					</li>
+					<li class="nav-item" id="prod-nav">
+						<a class="nav-link" href="product.html">Product</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="download.html">Download</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<div class="input-group mb-2 mb-sm-0">
+						<input class="form-control" type="text" placeholder="Search" aria-label="Search">
+						<button class="input-group-addon btn btn-outline-secondary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+					</div>
+					<a href="#" class="btn btn-outline-secondary ml-2">Login</a>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<section class="container-fluid px-5 mt-0" id="news-ticker">
+		<div class="row">
+			<div class="col-md-12" id="news-ticker-container">
+				<i class="fa fa-bullhorn float-left mr-1" aria-hidden="true"></i><p class="m-0 p-0 float-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="container-fluid px-5 mt-2" id="main-accordion">
+		<div class="row">
+			<div class="col-md-12 p-0" id="main-accordion-container">
+				<ul>
+					<li class="active">
+						<div class="section-title">
+							<h2>News</h2>
+						</div>
+						<div class="section-content">
+							<div class="container-fluid">
+								<div class="row">
+
+									<div class="col-md-12 pb-2 pt-5">
+										<div class="btn-group" role="group" aria-label="First group">
+											<a href="news.html" class="btn btn-primary rounded-0"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+											<a href="news.html" class="btn btn-outline-primary rounded-0">Perbandingan Harga Pipa HDPE dengan Produk pipa Lain</a>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="container">
+										<div class="col-md-12">
+											<img class="post-image" src="images/post-1.jpg">
+											<h1>Perbandingan Harga Pipa HDPE dengan Produk pipa Lain</h1>
+											<ul class="nav post-nav">
+												<li class="nav-item">
+													<a class="nav-link" href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 21 Agustus 2017</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="#"><i class="fa fa-tag" aria-hidden="true"></i> Product</a>
+												</li>
+											</ul>
+											<p class="lead">Perbedaan harga produk pipa ditentukan oleh bahan baku yang digunakan. Karena hal ini kerap berkaitan dengan kekuatan produk saat digunakan untuk kebutuhan saluran tertentu. Misalnya pipa PPR untuk saluran air panas dan dingin bertekan, atau pipa HDPE untuk saluran air bersih bertekanan.</p>
+											<p>Menggunakan perbandingan produk pipa Wavin, produk pipa PPR memiliki harga lebih mahal, hampir 3 kali lipat dari harga Pipa HDPE. Sementara Pipa PVC berharga lebih murah sekitar 50% dari produk pipa PE-100. Perbandingan harga tersebut disesuaikan dengan ketentuan varian tekanan (PN-10) dan diameter yang sama, dengan satuan per meter.</p>
+											<p>Harga diatas tak selalu berlaku, karena beda brand produk umumnya memiliki ketentuan harga berbeda satu dengan yang lain. Dan biasanya distributor pipa yang berpengalaman akan memberi tahu Anda solusi tepat penggunaan produk yang sesuai dengan kebutuhan saluran yang hendak Anda bangun.</p>
+											<p>Dalam hal aksesoris pipa, produk pipa HDPE memiliki harga relatif lebih mahal. Sementara pipa PPR memiliki harga tting beberapa kali lebih mahal ketimbang tting pipa PVC.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/umd/popper.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script>
+		var section = $('#main-accordion-container>ul>li');
+		var index = 0;
+
+		changeZIndex();
+
+		function changeZIndex() {
+			var i = 10;
+			$('#main-accordion-container>ul>li.active ~ li').each(function(index, val) {
+				$(val).css('z-index', i);
+				resetMargin();
+				i--;
+			});
+		}
+
+		function resetMargin() {
+			section.each(function(i, val){
+				if($(val).index() > index) {
+					$(val).children('.section-title').children('h2').animate({
+							'margin-left': '-20px', 
+							// 'display': 'none'
+						}, 'fast');
+				}
+				else {
+					$(val).children('.section-title').children('h2').animate({
+							'margin-left': '50px', 
+							// 'display': 'none'
+						}, 'fast');
+				}
+			});
+		}
+
+		section.hover(function() {
+			if($(this).index() > index) {
+				$(this).children('.section-title').children('h2').animate({
+						'margin-left': '25px', 
+						// 'display': 'block'
+					}, 'fast');
+			}
+			else {
+				$(this).children('.section-title').children('h2').animate({
+						'margin-left': '5px', 
+						// 'display': 'block'
+					}, 'fast');
+			}
+			// $(this).children('.section-title').children('h2').fadeIn('fast');
+		}, function() {
+			resetMargin();
+		});
+
+		function toggleAccordion() {
+			section.removeClass('active');
+			section.css('z-index', 0);
+			section.children('.section-title').children('h2').css('margin-left', '5px');
+			$(this).addClass('active');
+			index = $(this).index();
+			changeZIndex();
+			resetMargin();
+			$('.active').css('z-index', 15);
+		}
+
+		section.on('click', toggleAccordion);
+
+	</script>
+</body>
+</html>
