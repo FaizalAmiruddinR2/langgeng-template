@@ -180,7 +180,6 @@ a:hover {
 #main-accordion-container>ul>li .section-title h2 {
 	transform: rotate(90deg);
 	white-space: nowrap;
-	width: 0px;
 	/*display: none;*/
 	width: 50px;
 	margin-left: 25px;
