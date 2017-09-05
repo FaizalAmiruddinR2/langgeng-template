@@ -2,13 +2,46 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link href="./images/favicon.png" rel="shortcut icon">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/main.css">
 	<title>Langgeng</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="css/mdb.min.css"> -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<!-- Modal -->
+	<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Login Form</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<form role="form" class="md-form">
+				<div class="modal-body">
+						<div class="form-group">
+							<input type="email" class="form-control" name="email" id="email" required>
+					        <span class="form-highlight"></span>
+					        <span class="form-bar"></span>
+					        <label class="float-label" for="email">Email</label>
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" name="password" id="password" required>
+					        <span class="form-highlight"></span>
+					        <span class="form-bar"></span>
+					        <label class="float-label" for="password">Password</label>
+						</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-raised btn-primary">Sign-In</button>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
 	<nav class="navbar navbar-expand-lg navbar-light">
 		<div class="container-fluid px-5">
 			<a class="navbar-brand mr-md-3" href="#">
@@ -44,7 +77,11 @@
 						<input class="form-control" type="text" placeholder="Search" aria-label="Search">
 						<button class="input-group-addon btn btn-outline-secondary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 					</div>
-					<a href="#" class="btn btn-primary ml-2" >Login</a>
+					<a href="#" class="btn btn-primary ml-2" data-toggle="modal" data-target="#modal-login">Login</a>
+					<ul id="flag-icon">
+						<li><a href="#"><img src="img/id.png" title="Indonesian"></a></li>
+						<li><a href="#"><img src="img/en.png" title="English"></a></li>
+					</ul>
 				</form>
 			</div>
 		</div>
@@ -58,542 +95,343 @@
 		</div>
 	</section>
 
-	<section class="container-fluid px-5 mt-2" id="main-accordion">
-		<div class="row">
-			<div class="col-md-12 p-0" id="main-accordion-container">
-				<ul>
-					<li class="active news-sec">
-						<div class="section-title">
-							<h2>News</h2>
+	<section class="card-carousel-container">
+		<div class="card-carousel">
+			<h4 class="card-carousel-title-vert left">
+				Headline
+			</h4>
+			<h4 class="card-carousel-title-vert right">
+				Headline
+			</h4>
+			<div class="card-carousel-content">
+				<div id="full-page-headline">
+					<div id="full-page-headline-caption">
+						<a href="post.html">
+							<h1>Perbandingan Harga Pipa HDPE dengan Produk pipa Lain</h1>
+							<p>Perbedaan harga produk pipa ditentukan oleh bahan baku yang digunakan. Karena hal ini kerap berkaitan dengan kekuatan produk saat digunakan untuk kebutuhan saluran tertentu. Misalnya...</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-carousel prod-sec">
+			<h4 class="card-carousel-title-vert left">
+				SNI
+			</h4>
+			<h4 class="card-carousel-title-vert right">
+				SNI
+			</h4>
+			<div class="card-carousel-content">
+				<div class="card-carousel-content-item">
+					<div class="row carousel-content-header">
+						<div class="col-md-3 py-2">
+							<ol class="breadcrumb px-0 m-0">
+								<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+								<li class="breadcrumb-item"><a href="index.html">Product</a></li>
+								<li class="breadcrumb-item active">SNI</li>
+							</ol>
 						</div>
-						<div class="section-content">
-							<div class="container-fluid">
-								<div class="row">
-
-									<div class="col-md-3 py-2">
-										<ol class="breadcrumb px-0 m-0">
-											<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-											<li class="breadcrumb-item active">Headline</li>
-										</ol>
-									</div>
-									<div class="col-md-9 py-2">
-										<h1 class="float-right">Headline</h1>
-									</div>
-								</div>
-								<div class="row py-2 post-2">
-									<div class="col-md-6">
-										<div class="col-md-12 p-0">
-											<img src="images/post-8.JPG" alt="">
-										</div>
-										<div class="col-md-12 p-0">
-											<a href="post.html"><h1>Sidak Operasi K3</h1></a>
-											<a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 21 Agustus 2017</a>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum...<a href="post.html">Read More</a></p>
-											<ul class="nav post-nav">
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-tag" aria-hidden="true"></i> Product</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-tag" aria-hidden="true"></i> Announcement</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="col-md-12 p-0">
-											<img src="images/post-9.JPG" alt="">
-										</div>
-										<div class="col-md-12 p-0">
-											<a href="post.html"><h1>Proses Pipa PE</h1></a>
-											<a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 21 Agustus 2017</a>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum...<a href="post.html">Read More</a></p>
-											<ul class="nav post-nav">
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-tag" aria-hidden="true"></i> Product</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-tag" aria-hidden="true"></i> Announcement</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="row py-2 post-3">
-									<div class="col-md-4">
-										<div class="col-md-12 p-0">
-											<img src="images/post-5.JPG" alt="">
-										</div>
-										<div class="col-md-12 p-0">
-											<a href="post.html"><h1>Siap menghadapi 2017</h1></a>
-											<a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 21 Agustus 2017</a>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum...<a href="post.html">Read More</a></p>
-											<ul class="nav post-nav">
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-tag" aria-hidden="true"></i> Product</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-tag" aria-hidden="true"></i> Announcement</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="col-md-12 p-0">
-											<img src="images/post-6.JPG" alt="">
-										</div>
-										<div class="col-md-12 p-0">
-											<a href="post.html"><h1>Kualitas Kelas Dunia</h1></a>
-											<a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 21 Agustus 2017</a>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum...<a href="post.html">Read More</a></p>
-											<ul class="nav post-nav">
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-tag" aria-hidden="true"></i> Product</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-tag" aria-hidden="true"></i> Announcement</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="col-md-12 p-0">
-											<img src="images/post-7.JPG" alt="">
-										</div>
-										<div class="col-md-12 p-0">
-											<a href="post.html"><h1>Menguji Kemampuan Pipa</h1></a>
-											<a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 21 Agustus 2017</a>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum...<a href="post.html">Read More</a></p>
-											<ul class="nav post-nav">
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-tag" aria-hidden="true"></i> Product</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link" href="#"><i class="fa fa-tag" aria-hidden="true"></i> Announcement</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								
-							</div>
+						<div class="col-md-9 py-2">
+							<h1 class="card-carousel-title pull-right">SNI</h1>
 						</div>
-					</li>
-					<li class="prod-sec">
-						<div class="section-title">
-							<h2>SNI</h2>
+					</div>
+					<div class="row py-2">
+						<div class="col-md-3">
+							<img src="images/produk-24.JPG" class="img-fluid" alt="">
 						</div>
-						<div class="section-content">
-							<div class="container-fluid">
-								<div class="row">
-
-									<div class="col-md-3 py-2">
-										<ol class="breadcrumb px-0 m-0">
-											<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-											<li class="breadcrumb-item"><a href="index.html">Product</a></li>
-											<li class="breadcrumb-item active">SNI</li>
-										</ol>
-									</div>
-									<div class="col-md-9 py-2">
-										<h1 class="float-right">SNI</h1>
-									</div>
-								</div>
-								<div class="row py-2">
-									<div class="col-md-3">
-										<img src="images/produk-24.JPG" class="img-fluid" alt="">
-									</div>
-									<div class="col-md-9">
-										<a href="detail.html"><h1>Nama Barang</h1></a>
-										<span class="price" >Rp 2.500.000,-</span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste...</p>
-										<a href="detail.html" class="btn btn-primary">Detail</a>
-									</div>
-								</div>
-								<div class="row py-2">
-									<div class="col-md-3">
-										<img src="images/produk-25.JPG" class="img-fluid" alt="">
-									</div>
-									<div class="col-md-9">
-										<a href="detail.html"><h1>Nama Barang</h1></a>
-										<span class="price" >Rp 2.500.000,-</span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste...</p>
-										<a href="detail.html" class="btn btn-primary">Detail</a>
-									</div>
-								</div>
-								<div class="row py-2">
-									<div class="col-md-3">
-										<img src="images/produk-26.JPG" class="img-fluid" alt="">
-									</div>
-									<div class="col-md-9">
-										<a href="detail.html"><h1>Nama Barang</h1></a>
-										<span class="price" >Rp 2.500.000,-</span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste...</p>
-										<a href="detail.html" class="btn btn-primary">Detail</a>
-									</div>
-								</div>
-								<div class="row py-2">
-									<div class="col-md-3">
-										<img src="images/produk-27.JPG" class="img-fluid" alt="">
-									</div>
-									<div class="col-md-9">
-										<a href="detail.html"><h1>Nama Barang</h1></a>
-										<span class="price" >Rp 2.500.000,-</span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste...</p>
-										<a href="detail.html" class="btn btn-primary">Detail</a>
-									</div>
-								</div>
-								<div class="row py-2">
-									<div class="col-md-3">
-										<img src="images/produk-28.JPG" class="img-fluid" alt="">
-									</div>
-									<div class="col-md-9">
-										<a href="detail.html"><h1>Nama Barang</h1></a>
-										<span class="price" >Rp 2.500.000,-</span>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste...</p>
-										<a href="detail.html" class="btn btn-primary">Detail</a>
-									</div>
+						<div class="col-md-9">
+							<a href="detail.html"><h1>Nama Barang</h1></a>
+							<span class="price" >Rp 2.500.000,-</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste...</p>
+							<a href="detail.html" class="btn btn-primary">Detail</a>
+						</div>
+					</div>
+					<div class="row py-2">
+						<div class="col-md-3">
+							<img src="images/produk-25.JPG" class="img-fluid" alt="">
+						</div>
+						<div class="col-md-9">
+							<a href="detail.html"><h1>Nama Barang</h1></a>
+							<span class="price" >Rp 2.500.000,-</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste...</p>
+							<a href="detail.html" class="btn btn-primary">Detail</a>
+						</div>
+					</div>
+					<div class="row py-2">
+						<div class="col-md-3">
+							<img src="images/produk-26.JPG" class="img-fluid" alt="">
+						</div>
+						<div class="col-md-9">
+							<a href="detail.html"><h1>Nama Barang</h1></a>
+							<span class="price" >Rp 2.500.000,-</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste...</p>
+							<a href="detail.html" class="btn btn-primary">Detail</a>
+						</div>
+					</div>
+					<div class="row py-2">
+						<div class="col-md-3">
+							<img src="images/produk-27.JPG" class="img-fluid" alt="">
+						</div>
+						<div class="col-md-9">
+							<a href="detail.html"><h1>Nama Barang</h1></a>
+							<span class="price" >Rp 2.500.000,-</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste...</p>
+							<a href="detail.html" class="btn btn-primary">Detail</a>
+						</div>
+					</div>
+					<div class="row py-2">
+						<div class="col-md-3">
+							<img src="images/produk-28.JPG" class="img-fluid" alt="">
+						</div>
+						<div class="col-md-9">
+							<a href="detail.html"><h1>Nama Barang</h1></a>
+							<span class="price" >Rp 2.500.000,-</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste...</p>
+							<a href="detail.html" class="btn btn-primary">Detail</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="card-carousel prod-sec">
+			<h4 class="card-carousel-title-vert left">
+				JIS
+			</h4>
+			<h4 class="card-carousel-title-vert right">
+				JIS
+			</h4>
+			<div class="card-carousel-content">
+				<div class="card-carousel-content-item">
+					<div class="row carousel-content-header">
+						<div class="col-md-3 py-2">
+							<ol class="breadcrumb px-0 m-0">
+								<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+								<li class="breadcrumb-item"><a href="index.html">Product</a></li>
+								<li class="breadcrumb-item active">JIS</li>
+							</ol>
+						</div>
+						<div class="col-md-9 py-2">
+							<h1 class="card-carousel-title pull-right">JIS</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-12.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compession Equal Tee</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
 								</div>
 							</div>
 						</div>
-					</li>
-					<li class="prod-sec">
-						<div class="section-title">
-							<h2>JIS</h2>
-						</div>
-						<div class="section-content">
-							<div class="container-fluid">
-								<div class="row">
-
-									<div class="col-md-3 py-2">
-										<ol class="breadcrumb px-0 m-0">
-											<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-											<li class="breadcrumb-item"><a href="index.html">Product</a></li>
-											<li class="breadcrumb-item active">JIS</li>
-										</ol>
-									</div>
-									<div class="col-md-9 py-2">
-										<h1 class="float-right">JIS</h1>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-12.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compession Equal Tee</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-13.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Bend</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-14.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression End Cap</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-15.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Female Threaded Adaptor</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-16.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Female Threaded Bend 90o</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-17.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Female Threaded Tee</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-18.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Male Threaded Adaptor</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-19.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Male Threaded Bend 90o</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-20.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Reducing Tee</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-21.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Cross PE</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-13.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Bend</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
 								</div>
 							</div>
 						</div>
-					</li>
-					<li class="prod-sec">
-						<div class="section-title">
-							<h2>Fitting</h2>
-						</div>
-						<div class="section-content">
-							<div class="container-fluid">
-								<div class="row">
-
-									<div class="col-md-3 py-2">
-										<ol class="breadcrumb px-0 m-0">
-											<li class="breadcrumb-item"><a href="product.html">Home</a></li>
-											<li class="breadcrumb-item"><a href="product.html">Product</a></li>
-											<li class="breadcrumb-item active">Fitting</li>
-										</ol>
-									</div>
-									<div class="col-md-9 py-2">
-										<h1 class="float-right">Fitting</h1>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-12.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compession Equal Tee</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-13.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Bend</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-14.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression End Cap</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-15.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Female Threaded Adaptor</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-16.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Female Threaded Bend 90o</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-17.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Female Threaded Tee</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-18.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Male Threaded Adaptor</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-19.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Male Threaded Bend 90o</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-20.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Compression Reducing Tee</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 mb-2">
-										<div class="card">
-											<img class="card-img-top" src="images/produk-21.png" alt="Card image cap">
-											<div class="card-body text-center">
-												<h5 class="card-title">Cross PE</h5>
-												<a href="detail.html" class="btn btn-primary">Detail</a>
-											</div>
-										</div>
-									</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-14.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression End Cap</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
 								</div>
 							</div>
-						</div>    
-					</li>
-				</ul>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-15.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Female Threaded Adaptor</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-16.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Female Threaded Bend 90o</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-17.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Female Threaded Tee</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-18.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Male Threaded Adaptor</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-19.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Male Threaded Bend 90o</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-20.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Reducing Tee</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-21.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Cross PE</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-carousel prod-sec">
+			<h4 class="card-carousel-title-vert left">
+				Fitting
+			</h4>
+			<h4 class="card-carousel-title-vert right">
+				Fitting
+			</h4>
+			<div class="card-carousel-content">
+				<div class="card-carousel-content-item">
+					<div class="row carousel-content-header">
+						<div class="col-md-3 py-2">
+							<ol class="breadcrumb px-0 m-0">
+								<li class="breadcrumb-item"><a href="product.html">Home</a></li>
+								<li class="breadcrumb-item"><a href="product.html">Product</a></li>
+								<li class="breadcrumb-item active">Fitting</li>
+							</ol>
+						</div>
+						<div class="col-md-9 py-2">
+							<h1 class="card-carousel-title pull-right">Fitting</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-12.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compession Equal Tee</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-13.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Bend</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-14.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression End Cap</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-15.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Female Threaded Adaptor</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-16.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Female Threaded Bend 90o</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-17.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Female Threaded Tee</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-18.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Male Threaded Adaptor</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-19.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Male Threaded Bend 90o</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-20.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Compression Reducing Tee</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 mb-2">
+							<div class="card">
+								<img class="card-img-top" src="images/produk-21.png" alt="Card image cap">
+								<div class="card-body text-center">
+									<h5 class="card-title">Cross PE</h5>
+									<a href="detail.html" class="btn btn-primary">Detail</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/umd/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<!-- <script src="js/mdb.min.js"></script> -->
 	<script src="js/masonry.pkgd.min.js"></script>
-	<script>
-		var section = $('#main-accordion-container>ul>li');
-		var index = 0;
-
-		changeZIndex();
-
-		function changeZIndex() {
-			var i = 10;
-			$('#main-accordion-container>ul>li.active ~ li').each(function(index, val) {
-				$(val).css('z-index', i);
-				resetMargin();
-				i--;
-			});
-		}
-
-		function resetMargin() {
-			section.each(function(i, val){
-				$(val).queue(function(){
-					if($(val).index() > index) {
-						$(val).children('.section-title').children('h2').css({
-								'margin-left': '20px', 
-								'display': 'none'
-							});
-					}
-					else {
-						$(val).children('.section-title').children('h2').css({
-								'margin-left': '5px', 
-								'display': 'none'
-							});
-					}
-					$(val).children('.section-title').css('width', '25px');
-					$(val).dequeue();
-				});
-			});
-		}
-
-		section.hover(function() {
-			$(this).queue(function(){
-				$(this).children('.section-title').css('width', '80px');
-				$(this).dequeue();
-			});
-
-			$(this).queue(function(){
-				var elm = $(this);
-				var intv = setInterval(function(){ 
-					if(elm.index() > index) {
-						elm.children('.section-title').children('h2').css({
-								// 'margin-left': '25px', 
-								'display': 'block'
-							});
-					}
-					else {
-						elm.children('.section-title').children('h2').css({
-								// 'margin-left': '5px', 
-								'display': 'block'
-							});
-					}
-					elm.dequeue();
-					clearInterval(intv);
-				}, 200);
-			});
-			// $(this).children('.section-title').children('h2').fadeIn('fast');
-		}, function() {
-			resetMargin();
-		});
-
-		function toggleAccordion() {
-			section.removeClass('active');
-			section.css('z-index', 0);
-			section.children('.section-title').children('h2').css('margin-left', '5px');
-			$(this).addClass('active');
-			index = $(this).index();
-			changeZIndex();
-			resetMargin();
-			$('.active').css('z-index', 15);
-
-			$('.navbar-nav li').removeClass('active');
-			if($('.prod-sec').is('.active')) {
-				$('#prod-nav').addClass('active');
-			}
-			else {
-				$('#home-nav').addClass('active');
-			}
-		}
-
-		section.on('click', toggleAccordion);
-
-	</script>
+	<script src="js/main.js"></script>
 </body>
 </html>
