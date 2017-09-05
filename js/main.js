@@ -75,7 +75,7 @@ $('.card-carousel').hover(function() {
 			for (var i = value; i >= min; i--) {
 				$('[data-value='+i+']').each(function(i, card) {
 					var index = parseInt($(card).index());
-					$(card).animate({
+					$(card).stop(true, true).animate({
 						left: (2+index*1.5)+'%',
 					}, 200);
 				});
@@ -85,7 +85,7 @@ $('.card-carousel').hover(function() {
 			for (var i = value; i <= max; i++) {
 				$('[data-value='+i+']').each(function(i, card) {
 					var index = parseInt($(card).index());
-					$(card).animate({
+					$(card).stop(true, true).animate({
 						left: (4+index*1.5)+'%',
 					}, 200);
 				});
@@ -99,7 +99,7 @@ $('.card-carousel').hover(function() {
 		for (var i = value; i <= max; i++) {
 			$('[data-value='+i+']').each(function(i, card) {
 				var index = parseInt($(card).index());
-				$(card).animate({
+				$(card).stop(true, true).animate({
 					left: (3+index*1.5)+'%',
 				}, 200);
 			});
