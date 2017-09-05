@@ -3,6 +3,10 @@ $('.card-carousel').each(function(i, card){
 	var index = parseInt($(card).index());
 	$(card).attr('data-value', index);
 });
+
+$('.card-carousel').width($(document).width()-($(document).width()*5/100)-($(document).width()*(($('.card-carousel').length-1)*1.5)/100));
+
+var initialHeight = Math.round(($('.card-carousel-container').height()-$('.card-carousel-container').offset().top) / $(window).height() * 100);
 var min = $('.card-carousel').first().index();
 var max = $('.card-carousel').last().index();
 
@@ -22,20 +26,40 @@ function resetLayout() {
 		var value = parseInt($(card).attr('data-value'));
 		var index = parseInt($(card).index());
 		if(value < 0) {
-			$(card).animate({
-				height: (81+(value*2))+'%',
-				left: (3+index*1.5)+'%',
-				'margin-top': (1-value/2)+'%',
-				'z-index': 20+value
-			}, 250);
+			if(!$(card).is('.active')) {
+				$(card).animate({
+					height: (initialHeight-(1*2))+'%',
+					left: (2.5+index*1.5)+'%',
+					'margin-top': (1/2)+'%',
+					'z-index': 20+value
+				}, 250);
+			}
+			else {
+				$(card).animate({
+					height: (initialHeight)+'%',
+					left: (2.5+index*1.5)+'%',
+					'margin-top': '0%',
+					'z-index': 20+value
+				}, 250);
+			}
 		}
 		else {
-			$(card).animate({
-				height: (81-(value*2))+'%',
-				left: (3+index*1.5)+'%',
-				'margin-top': (1+value/2)+'%',
-				'z-index': 20-value
-			}, 250);	
+			if(!$(card).is('.active')) {
+				$(card).animate({
+					height: (initialHeight-(1*2))+'%',
+					left: (2.5+index*1.5)+'%',
+					'margin-top': (1/2)+'%',
+					'z-index': 20-value
+				}, 250);
+			}
+			else {
+				$(card).animate({
+					height: (initialHeight)+'%',
+					left: (2.5+index*1.5)+'%',
+					'margin-top': '0%',
+					'z-index': 20-value
+				}, 250);
+			}
 		}
 	});
 }
@@ -156,5 +180,3 @@ $('#product-carousel').on('slide.bs.carousel', function (carItem) {
 	$('#preview-select [data-slide-to='+carItem.from+']').removeClass('active');
 	$('#preview-select [data-slide-to='+carItem.to+']').addClass('active');
 })
-
-$('.card-carousel').width($(document).width()-($(document).width()*6/100)-($(document).width()*(($('.card-carousel').length-1)*1.5)/100));

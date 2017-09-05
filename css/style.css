@@ -134,6 +134,13 @@ News Ticker
 Stacked Card Carousel
 */
 
+.card-carousel-container {
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-top: 1%;
+}
+
 .card-carousel {
 	position: absolute;
 	width: 88%;
