@@ -40,11 +40,11 @@ a:hover {
 }
 
 .nav-item .nav-link {
-	color: #1e88e5 !important;
+	color: #212121 !important;
 }
 
 .active .nav-link {
-	color: #f4b800 !important;
+	color: #fef003 !important;
 	background: unset !important;
 }
 
@@ -54,7 +54,7 @@ a:hover {
 }
 
 .btn-custom {
-	background: #1e88e5;
+	background: #212121;
 	color: #ffffff;
 }
 
@@ -149,7 +149,7 @@ Stacked Card Carousel
 	border-radius: 10px;
 	overflow: hidden;
 	cursor: pointer;
-	background: #00CBF3;
+	background: #fef003;
 	box-shadow: 0px 0px 10px #333333;
 	transition: background 1s ease;
 }
@@ -916,10 +916,10 @@ body {
 	font-size: 12px;
 }
 .pen-title span .fa {
-	color: #00CBF3;
+	color: #fef003;
 }
 .pen-title span a {
-	color: #00CBF3;
+	color: #fef003;
 	font-weight: 600;
 	text-decoration: none;
 }
@@ -932,7 +932,7 @@ body {
 .rerun a {
 	cursor: pointer;
 	display: inline-block;
-	background: #00CBF3;
+	background: #fef003;
 	border-radius: 3px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	padding: 10px 20px;
@@ -971,7 +971,7 @@ body {
 #portfolio {
 	bottom: 96px;
 	right: 36px;
-	background: #00CBF3;
+	background: #fef003;
 	width: 44px;
 	height: 44px;
 	-webkit-animation: buttonFadeInUp 1s ease;
@@ -1077,10 +1077,10 @@ body {
 .card-login .title {
 	position: relative;
 	z-index: 1;
-	border-left: 5px solid #00CBF3;
+	border-left: 5px solid #fef003;
 	margin: 0 0 35px;
 	padding: 10px 0 10px 50px;
-	color: #00CBF3;
+	color: #fef003;
 	font-size: 32px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -1136,7 +1136,7 @@ body {
 .card-login .input-container .bar:before, .card-login .input-container .bar:after {
 	content: '';
 	position: absolute;
-	background: #00CBF3;
+	background: #fef003;
 	width: 0;
 	height: 2px;
 	-webkit-transition: .2s ease;
@@ -1182,7 +1182,7 @@ body {
 	top: 50%;
 	left: 50%;
 	display: block;
-	background: #00CBF3;
+	background: #fef003;
 	width: 30px;
 	height: 30px;
 	border-radius: 100%;
@@ -1192,10 +1192,10 @@ body {
 	transition: .3s ease;
 }
 .card-login .button-container button:hover, .card-login .button-container button:active, .card-login .button-container button:focus {
-	border-color: #00CBF3;
+	border-color: #fef003;
 }
 .card-login .button-container button:hover span, .card-login .button-container button:active span, .card-login .button-container button:focus span {
-	color: #00CBF3;
+	color: #fef003;
 }
 .card-login .button-container button:active span, .card-login .button-container button:focus span {
 	color: #ffffff;
@@ -1241,7 +1241,7 @@ body {
 }
 .card-login.alt .toggle-register {
 	position: relative;
-	background: #00CBF3;
+	background: #fef003;
 	width: 140px;
 	height: 140px;
 	border-radius: 100%;
@@ -1312,7 +1312,7 @@ body {
 	border-color: #ffffff;
 }
 .card-login.alt .button-container button span {
-	color: #00CBF3;
+	color: #fef003;
 }
 .card-login.alt .button-container button:hover {
 	background: rgba(255, 255, 255, 0.9);
