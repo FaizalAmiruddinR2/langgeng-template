@@ -24,7 +24,7 @@ function resetLayout() {
 			});
 		}
 		else {
-			$(card).css({'background': '#00CBF3'});
+			$(card).css({'background': '#fef003'});
 		}
 		var value = parseInt($(card).attr('data-value'));
 		var index = parseInt($(card).index());
@@ -72,7 +72,7 @@ $('.card-carousel').hover(function() {
 	// if (!$(this).is($('.active')) && !$(this).is(':animated') && !$(this).parent().is(':animated') && cardState == 0) {
 	if (!$(this).is($('.active')) && cardState == 0) {
 		cardState = 1;
-		$(this).css({'background': '#00F39E'});
+		$(this).css({'background': '#fef003'});
 		var value = parseInt($(this).attr('data-value'));
 		if(value < 0) {
 			for (var i = value; i >= min; i--) {
@@ -97,7 +97,7 @@ $('.card-carousel').hover(function() {
 	}
 }, function() {
 	if (!$(this).is($('.active')) && cardState == 1) {
-		$(this).css({'background': '#00CBF3'});
+		$(this).css({'background': '#fef003'});
 		var value = parseInt($(this).attr('data-value'));
 		for (var i = value; i <= max; i++) {
 			$('[data-value='+i+']').each(function(i, card) {
@@ -114,7 +114,7 @@ $('.card-carousel').hover(function() {
 
 $('.card-carousel').click(function(event) {
 	$('.card-carousel .carousel-content-header').css({
-		'background': '#00F39E', 
+		'background': '#fef003', 
 		'box-shadow': '0 0px 0px lightgrey'
 	});
 	cardState = 0;
