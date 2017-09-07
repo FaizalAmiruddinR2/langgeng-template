@@ -48,6 +48,15 @@ a:hover {
 	background: unset !important;
 }
 
+/*.nav-item.active .nav-link:after {
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 15px solid black;
+	border-bottom: 15px solid black;
+}*/
+
 .post-nav .nav-link {
 	padding-left: 0;
 	font-size: small;

@@ -1,17 +1,53 @@
-$('.card-carousel').first().addClass('active');
-$('.card-carousel').each(function(i, card){
-	var index = parseInt($(card).index());
-	$(card).attr('data-value', index);
-});
+var min = $('.card-carousel').first().index();
+var max = $('.card-carousel').last().index();
+var newLoad = true;
+
+if($(location).attr('hash') == '' || $(location).attr('hash') == '#') {
+	$('.card-carousel').first().addClass('active');
+
+	$('.card-carousel').each(function(i, card){
+		var index = parseInt($(card).index());
+		$(card).attr('data-value', index);
+	});
+}
+else {
+	$($(location).attr('hash')).addClass('active');
+
+	var value = parseInt($($(location).attr('hash')).index('.card-carousel'));
+	var elm = $('.card-carousel').toArray();
+	var x = 0;
+
+	if(value > 0) {
+		elm.forEach(function(item, index, array) {
+			var newVal = value - 0;
+			var elmVal = parseInt($(item).index('.card-carousel'));
+			$(item).attr('data-value', elmVal-newVal);
+			console.log(elmVal, newVal, elmVal-newVal, $(item).attr('data-value'));
+			if(index == 0) {
+				min = $(item).attr('data-value');
+			}
+			max = $(item).attr('data-value');
+		});
+	}
+	else {
+		elm.forEach(function(item, index, array) {
+			var newVal = 0 - value;
+			var elmVal = parseInt($(item).index('.card-carousel'));
+			$(item).attr('data-value', elmVal+newVal);
+			console.log(elmVal, newVal, elmVal+newVal, $(item).attr('data-value'));
+			if(index == 0) {
+				min = $(item).attr('data-value');
+			}
+			max = $(item).attr('data-value');
+		});
+	}
+}
 
 var initialHeight = Math.round(($('.card-carousel-container').height()-$('.card-carousel-container').offset().top) / $(window).height() * 100);
 
 $('.card-carousel').width($(document).width()-($(document).width()*5/100)-($(document).width()*(($('.card-carousel').length-1)*1.5)/100));
 
 $('#full-page-headline-caption').css('padding-top', $('.card-carousel.active').height()-($('.card-carousel.active').height()*30/100));
-
-var min = $('.card-carousel').first().index();
-var max = $('.card-carousel').last().index();
 
 resetLayout();
 
@@ -179,7 +215,6 @@ $('.card-carousel>.card-carousel-content').scroll(function(){
 })
 
 $('#product-carousel').on('slide.bs.carousel', function (carItem) {
-	// console.log(carItem);
 	$('#preview-select [data-slide-to='+carItem.from+']').removeClass('active');
 	$('#preview-select [data-slide-to='+carItem.to+']').addClass('active');
 })
